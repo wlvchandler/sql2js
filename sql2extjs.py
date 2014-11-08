@@ -1,7 +1,6 @@
 ﻿#convert mysql dump to ExtJS model files
 #does not support data types yet
 
-import sys
 import os
 import re
 
