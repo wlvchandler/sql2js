@@ -29,11 +29,9 @@ def create_model(name, model, models_to):
     
     model_file = open(models_to + ('\\' + name + '.js'), 'w')
     
-    model_file.write(
-                    'Ext.define(\'app.' + name + '\', {\n\t' +
-                        'extend: \'Ext.data.Model\',\n\t' +
-                        'fields: [\n\t\t'
-                    )
+    model_file.write('Ext.define(\'app.' + name + '\', {\n\t')
+    model_file.write('extend: \'Ext.data.Model\',\n\t')
+    model_file.write('fields: [\n\t\t')
     
     for item in member[:-1]:
         model_file.write('{ name: \'' + item + '\' },\n\t\t')
