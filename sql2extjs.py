@@ -1,6 +1,8 @@
 ﻿#convert mysql dump to ExtJS model files
 #does not support data types yet
 
+__author__ = "jaska"
+
 import os
 import re
 
@@ -8,7 +10,7 @@ def search_file(dump, models_to):
     i = 0
     for line in dump:
         i += 1
-        if "CREATE" in line:
+        if "CREATE TABLE" in line:
             tokens = re.findall(r"[\w']+|[.,!?;]", line)
             name = tokens[len(tokens)-1]
             j = i
